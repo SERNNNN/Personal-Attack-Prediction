@@ -59,6 +59,12 @@ Personal-Attack-Prediction/
 
 ## Dataset
 
+Datasets link are as follows below:
+
+https://zissou.infosci.cornell.edu/convokit/datasets/conversations-gone-awry-cmv-corpus/conversations-gone-awry-cmv-corpus.zip
+https://zissou.infosci.cornell.edu/convokit/datasets/conversations-gone-awry-corpus/v1.zip
+https://zissou.infosci.cornell.edu/convokit/datasets/conversations-gone-awry-corpus/conversations-gone-awry-corpus.zip
+
 The scripts expect a **conversation-level CSV** with the following columns:
 
 | Column            | Description                                                     |
