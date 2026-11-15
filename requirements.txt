@@ -1,0 +1,13 @@
+# PyTorch with CUDA 12.6 support
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+torch==2.7.1+cu126
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10
+joblib>=1.3
+transformers>=4.40,<5
+accelerate>=0.28
+tqdm>=4.66
+pytest>=7.4

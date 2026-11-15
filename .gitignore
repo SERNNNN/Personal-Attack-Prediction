@@ -1,0 +1,35 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+
+# Model checkpoints and weights
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Hugging Face cache
+.cache/
+huggingface_cache/
+
+# Keep experiment metrics and CSV results
+# Exclude only large model artifacts

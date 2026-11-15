@@ -1,0 +1,43 @@
+{
+  "experiment_name": "roberta_early_prediction",
+  "dataset": {
+    "path": "data/conversations_clean.csv",
+    "text_column": "text",
+    "label_column": "label",
+    "split_column": "split",
+    "conversation_id_column": "conversation_id",
+    "pair_id_column": "pair_id",
+    "utterance_separator": "\u25aa\u25e6\u25aa",
+    "train_split": "train",
+    "validation_split": "val",
+    "test_split": "test"
+  },
+  "early_prediction": {
+    "stages_percent": [
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "prefix_unit": "utterances",
+    "rounding": "ceil",
+    "minimum_prefix_utterances": 1
+  },
+  "model": {
+    "checkpoint": "FacebookAI/roberta-base",
+    "max_sequence_length": 512
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 2,
+    "eval_batch_size": 2,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.0,
+    "random_seed": 42,
+    "fp16": false
+  },
+  "output": {
+    "directory": "results/roberta"
+  }
+}

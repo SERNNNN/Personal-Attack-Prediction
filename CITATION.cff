@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated course project."
+title: "Early Prediction of Personal Attacks in Online Discussions"
+type: software
+authors:
+  - family-names: "Student"
+    given-names: "Project Author"
+version: 1.0.0
+date-released: 2026-11-14
