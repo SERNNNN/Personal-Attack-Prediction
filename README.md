@@ -119,7 +119,7 @@ A5000, but the author is using a version compatible with an RTX 2060 laptop.
 ## Validate the dataset
 
 ```bash
-python src/data_preparation/validate_dataset.py --data data/conversations_clean.csv
+.\.venv\Scripts\python.exe -m src.data_preparation.validate_dataset --data data/conversations_clean.csv
 ```
 
 This checks required columns, labels, split values, duplicate conversation
@@ -128,8 +128,7 @@ IDs, utterance counts, and pair/split integrity where `pair_id` is present.
 ## Train the traditional model
 
 ```bash
-python src/training/traditional_early_prediction.py \
-  --config configs/traditional_config.json
+python src/training/traditional_early_prediction.py --config configs/traditional_config.json
 ```
 
 Windows PowerShell may use the same command on one line:
@@ -170,17 +169,13 @@ The script combines stage-level files into one summary table.
 Traditional model:
 
 ```bash
-python src/inference/predict.py \
-  --model results/traditional/stage_80/model.joblib \
-  --text-file path/to/conversation.txt
+.\.venv\Scripts\python.exe -m  src.inference.predict --model results/traditional/stage_80/model.joblib --text-file path/to/conversation.txt
 ```
 
 RoBERTa model:
 
 ```bash
-python src/inference/predict.py \
-  --model results/roberta/stage_80/model \
-  --text-file path/to/conversation.txt
+.\.venv\Scripts\python.exe -m  src.inference.predict --model results/roberta/stage_80/model --text-file path/to/conversation.txt
 ```
 
 The input text file should contain utterances separated by `▪◦▪`. Prediction
@@ -188,20 +183,9 @@ uses the same prefix convention as training.
 
 ## Outputs
 
-Each stage writes a folder under the configured output directory, for example:
+Each stage writes a folder under the configured output directory.
 
-```text
-results/traditional/
-├── stage_20/
-│   ├── metrics.json
-│   ├── predictions.csv
-│   └── model.joblib
-├── stage_40/
-├── stage_60/
-├── stage_80/
-├── stage_100/
-└── metrics.csv
-```
+
 
 RoBERTa additionally saves training logs and a Hugging Face model directory for
 each stage. Avoid committing large checkpoints unless required and permitted;
